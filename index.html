@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Issue Tracker</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body onload="fetchIssues()">
+    <div class="container">
+        <h1>Issue Tracker</h1>
+        <hr class="hr-blurry">
+    
+      <div class="jumbotron">
+        <h3>Add New Issue:</h3>
+        <form id="issueInputForm">
+          <div class="form-group">
+            <label for="issueDescInput">Description</label>
+            <input
+              type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue"/>
+          </div>
+
+          <div class="form-group">
+            <label for="issueSeverityInput">Severity</label>
+            <select id="issueSeverityInput" class="form-control">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="issueAssignedToInput">Assigned To:</label>
+            <input type="text" class="form-control" id="issueAssignedToInput" placeholder="Enter the Resposible Person"/>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <div class="col-lg-12">
+        <div id="issuesList">
+
+        </div>
+      </div>
+  </div>
+
+    <!-- Chance js for Ids -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.1.10/chance.min.js"
+      integrity="sha512-Mvo/gaGprTVzN9i+swfStIsSkBkzMsTRgWdES5BuVoV5WP9/SfJgoR+GlQIYMS4RCf62DiAn/JR/Im3q/GHNNg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+        <!-- Jquery -->
+        <script
+        src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous"
+      ></script>
+    <!-- Bootstrap -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Main JS Script -->
+    <script src="script.js"></script>
+
+  </body>
+</html>
